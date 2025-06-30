@@ -14,6 +14,7 @@ import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.input.KeyListener;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.input.KeyManager;
 
 import javax.inject.Inject;
 import java.awt.event.KeyEvent;
@@ -32,20 +33,24 @@ public class MenuStonesHiderPlugin extends Plugin implements KeyListener
     @Inject
     private MenuStonesHiderConfig config;
 
+    @Inject
+    private KeyManager keyManager;
+
+
     private boolean toggled = true;
 
     @Override
     protected void startUp()
     {
         updateOrShowWidgets(true);
-        client.getCanvas().addKeyListener(this);
+        keyManager.registerKeyListener(this);
     }
 
     @Override
     protected void shutDown()
     {
         updateOrShowWidgets(false);
-        client.getCanvas().removeKeyListener(this);
+        keyManager.unregisterKeyListener(this);
     }
 
     @Override
