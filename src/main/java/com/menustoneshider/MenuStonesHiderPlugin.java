@@ -36,7 +36,6 @@ public class MenuStonesHiderPlugin extends Plugin implements KeyListener
     @Inject
     private KeyManager keyManager;
 
-
     private boolean toggled = true;
 
     @Override
