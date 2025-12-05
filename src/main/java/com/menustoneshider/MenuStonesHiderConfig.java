@@ -34,21 +34,10 @@ public interface MenuStonesHiderConfig extends Config
     }
 
     @ConfigItem(
-            keyName = "hideBackground",
-            name = "Hide Background",
-            description = "Configures whether the background of the menu is hidden (Resizable classic only)",
-            position = 2
-    )
-    default boolean hideBackground()
-    {
-        return false;
-    }
-
-    @ConfigItem(
             keyName = "hideLeftBar",
             name = "Hide Left Sidebar",
             description = "Configures whether the left sidebar is hidden (Resizable classic only)",
-            position = 3
+            position = 2
     )
     default boolean hideLeftBar()
     {
@@ -59,7 +48,7 @@ public interface MenuStonesHiderConfig extends Config
             keyName = "hideRightBar",
             name = "Hide Right Sidebar",
             description = "Configures whether the right sidebar is hidden (Resizable classic only)",
-            position = 4
+            position = 3
     )
     default boolean hideRightBar()
     {
@@ -70,7 +59,7 @@ public interface MenuStonesHiderConfig extends Config
             keyName = "showMenuToggle",
             name = "Show hidden Menu hotkey",
             description = "Enable hotkey to show all hidden menu widgets",
-            position = 5
+            position = 4
     )
     default Keybind showMenuToggle()
     {
