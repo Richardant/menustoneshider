@@ -22,8 +22,8 @@ import java.awt.event.KeyEvent;
 @Slf4j
 @PluginDescriptor(
         name = "Menu Stones Hider",
-        description = "Hides menu stones, background and sidebars",
-        tags = {"stone", "hide", "menu", "bars", "background"}
+        description = "Hides menu stones and sidebars",
+        tags = {"stone", "hide", "menu", "bars"}
 )
 public class MenuStonesHiderPlugin extends Plugin implements KeyListener
 {
@@ -103,7 +103,6 @@ public class MenuStonesHiderPlugin extends Plugin implements KeyListener
     {
         toggleWidget(InterfaceID.ToplevelOsrsStretch.SIDE_MENU_GRAPHIC1, hide && config.hideLeftBar());
         toggleWidget(InterfaceID.ToplevelOsrsStretch.SIDE_MENU_GRAPHIC2, hide && config.hideRightBar());
-        toggleWidget(InterfaceID.ToplevelOsrsStretch.SIDE_BACKGROUND, hide && config.hideBackground());
         toggleWidget(InterfaceID.ToplevelOsrsStretch.SIDE_MENU_GRAPHIC5, hide && config.hideTopMenu());
         toggleWidget(InterfaceID.ToplevelOsrsStretch.SIDE_TOP, hide && config.hideTopMenu());
         toggleWidget(InterfaceID.ToplevelPreEoc.SIDE_MOVABLE_LAYER, hide && config.hideTopMenu());
